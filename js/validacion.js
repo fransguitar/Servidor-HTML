@@ -4,6 +4,7 @@ $(document).ready(function () {
     var m;
     var sen=0;
     $("#alert").hide();
+    $("#alert2").hide();
 
     $("#edad").click(function (e) { 
         e.preventDefault();
@@ -19,12 +20,15 @@ $(document).ready(function () {
         $("#edad").val(dd);
         
     });
+
+   
     $("#user").on("keypress", function (event) {
         var regex = new RegExp("^[a-zA-Z0-9]+$");
         var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-        var code=event.keyCode;
         if (!regex.test(key)) {
+            $("#user").val("");
             $("#alert").show();
+            $("#user").val("");
          }
         
         
@@ -34,10 +38,13 @@ $(document).ready(function () {
         var psw=$("#psw").val();
         var psw2=$("#psw2").val();
         if ((psw != psw2) || ($("#psw").val().length) == 0) {
-            
+            $("#alert2").show();
+            $("#psw").val("");
+            $("#psw2").val("");
         }
         else{
-            
+            alert("Sus datos fueron registrados");
+            location.reload();
         }
         
     });
