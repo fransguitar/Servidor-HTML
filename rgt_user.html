@@ -11,7 +11,7 @@
 	<body>
         <main>
             <form action="" class="formulario" id="formulario">
-                <form class="form-horizontal" method="post" action="#">
+                <form class="form-horizontal" method="post" action="">
 
                     <div class="form-group">
                         <label for="name" class="cols-sm-2 control-label">Nombre</label>
@@ -100,19 +100,37 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group ">
-                       
+                        <label for="confirm" class="cols-sm-2 control-label">Sufre de enfermedades</label>
+                        <div>
+                            <input type="radio" name="radio" id="si" class="rtio"><a class="text-secondary" > Si</a>
+                        </div>
+                        <div>
+                            <input type="radio" name="radio" id="no" class="rtio" checked><a class="text-secondary" > No</a>
+                        </div>
+                        
                     </div>
+                    <div>
+                        <div class="form-group " id="know">
+                            <label for="confirm" class="cols-sm-2 control-label">¿Cuales?</label>
+                            <div><p class="text-secondary">Sarampión-Malaria-Fiebre tifoidea-Hepatitis-Varicela-Gripe-Enfermedades de transmisión sexual</p></div>
+                            <div><textarea class="form-control" id="tx_ar" cols="30" rows="5"></textarea></div>
+                         </div>
+
+                    </div>
+
+                   
                     <div  class="form-group ">
                         <button  type="button" class="btn btn-primary btn-lg btn-block login-button" id="register">Register</button>
                      </div>
+                     
                 </form>
                 
 
 
             </form>
         </main>
+        
 
 		
 

@@ -3,6 +3,7 @@ $(document).ready(function () {
     var dd=0;
     var m;
     var sen=0;
+    $("#know").hide();
     $("#alert").hide();
     $("#alert2").hide();
 
@@ -48,4 +49,17 @@ $(document).ready(function () {
         }
         
     });
+    $(".rtio").change(function (e) { 
+        e.preventDefault();
+        console.log($("#si").prop("checked"));
+        if ($("#si").prop("checked")) {
+            $("#know").show();
+        }
+        else{
+            $("#know").hide();
+        }
+    });
+    
+   
+   
 });
